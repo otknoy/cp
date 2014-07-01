@@ -45,7 +45,7 @@ print str( """
 <title>議事録</title>
 <body>
 	<h1>議事録の新規作成</h1>
-	<form name="js" action="formToRdf.cgi" method="post">
+	<form name="formToRdf" action="formToRdf.cgi" method="post">
 		<p>
 		日付：<input type="date" name="date" value=""><br>
 		参加者：<select name="mem" multiple>

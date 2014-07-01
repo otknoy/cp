@@ -29,3 +29,9 @@
     dc:discription "こんにちわ"@ja ;
     dc:subject "おはよう"@ja .
 
+<http://example.com/testid/2014/07/01/16.12.03> cp:member <http://linkdata.org/resource/rdf1s949i#dummycard18> ;
+    cp:reminder "a"@ja ;
+    dc:date "2014/07/01/16.12.03"@ja ;
+    dc:discription "a"@ja ;
+    dc:subject "a"@ja .
+

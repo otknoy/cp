@@ -95,7 +95,7 @@ print ("\r\n\r\n")
     #print("<div class= 'card_image'><img src='../img/meishi.png'/></div><form id='edit'><input type='hidden' name='target' value='%s'><input type='text' name='edit_job' class= 'job_detail' value='%s'><br><input type='text'  class= 'name_detail' name='edit_name' value='%s'><br><select name='reliability'><option value='1'>1</option><option value='2'>2</option><option value='3' selected>3</option><option value='4'>4</option><option value='5'>5</option></select><textarea class= 'memo_detail' name='edit_memo'>%s</textarea><br></form>" % row).encode('utf_8')
 for row in qres:
   print("""
-  <div class= 'card_image'><img src='../img/meishi.png'/></div>
+  <div class= 'card_image'><img src='img/meishi.png'/></div>
   <form id='edit'>
     <input type='hidden' name='target' value=\""""+s+"""\">
     <input type='text' name='edit_job' class= 'job_detail' value=\""""+row.job+"""\">

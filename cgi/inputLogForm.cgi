@@ -42,24 +42,46 @@ for row in qres:
 
 
 print str( """
-<title>議事録</title>
+<head>
+	<title>議事録</title>
+	<link rel='stylesheet' href='../chosen.css'>
+	<style type='text/css' media='all'>
+    	.chosen-rtl .chosen-drop { left: -9000px; }
+	</style>
+</head>
 <body>
 	<h1>議事録の新規作成</h1>
 	<form name="formToRdf" action="formToRdf.cgi" method="post">
-		<p>
+		<div>
 		日付：<input type="date" name="date" value=""><br>
-		参加者：<select name="mem" multiple>
+		</div>
+		<div class='side-by-side clearfix'>
+		参加者：<select name="mem" data-placeholder="参加者を選択..." class="chosen-select" multiple style="width:300px;" tabindex="4">
 		"""+
 		selectionValues
 		+"""
 		</select>
+		</div>
 		議題：<input type="text" name="title" value=""><br>
 		内容：<br>
 		<textarea name="textarea1" rows="8" cols="40"></textarea><br>
 		備忘録：<br>
 		<textarea name="textarea2" rows="4" cols="40"></textarea><br>
 		<input type="submit" value="登録">
-		</p>
+	<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js' type='text/javascript'></script>
+	<script src='../js/chosen.jquery.js' type='text/javascript'></script>
+ 	<script type='text/javascript'>
+    	var config = {
+    	  '.chosen-select'           : {},
+    	  '.chosen-select-deselect'  : {allow_single_deselect:true},
+    	  '.chosen-select-no-single' : {disable_search_threshold:10},
+    	  '.chosen-select-no-results': {no_results_text:'Oops, nothing found!'},
+    	  '.chosen-select-width'     : {width:"95%"}
+    	}
+    	for (var selector in config) {
+    	  $(selector).chosen(config[selector]);
+    	}
+	</script>
 	</form>
 </body>
 </html>

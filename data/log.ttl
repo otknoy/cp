@@ -35,3 +35,31 @@
     dc:discription "a"@ja ;
     dc:subject "a"@ja .
 
+<http://example.com/testid/2014/07/01/19.29.38> cp:member <http://linkdata.org/resource/rdf1s949i#dummycard21> ;
+    cp:reminder ""@ja ;
+    dc:date "2014/07/01/19.29.38"@ja ;
+    dc:discription ""@ja ;
+    dc:subject ""@ja .
+
+<http://example.com/testid/2014/07/01/19.30.58> cp:member <http://linkdata.org/resource/rdf1s949i#dummycard0>,
+        <http://linkdata.org/resource/rdf1s949i#dummycard24> ;
+    cp:reminder "a"@ja ;
+    dc:date "2014/07/01/19.30.58"@ja ;
+    dc:discription "aa"@ja ;
+    dc:subject "a"@ja .
+
+<http://example.com/testid/2014/07/01/19.32.10> cp:member <http://linkdata.org/resource/rdf1s949i#dummycard10>,
+        <http://linkdata.org/resource/rdf1s949i#dummycard19> ;
+    cp:reminder ""@ja ;
+    dc:date "2014/07/01/19.32.10"@ja ;
+    dc:discription ""@ja ;
+    dc:subject ""@ja .
+
+<http://example.com/testid/2014/07/01/19.34.08> cp:member <http://linkdata.org/resource/rdf1s949i#dummycard12>,
+        <http://linkdata.org/resource/rdf1s949i#dummycard2>,
+        <http://linkdata.org/resource/rdf1s949i#dummycard9> ;
+    cp:reminder "k"@ja ;
+    dc:date "2014/07/01/19.34.08"@ja ;
+    dc:discription "o"@ja ;
+    dc:subject "a"@ja .
+

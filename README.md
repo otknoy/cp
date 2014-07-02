@@ -20,7 +20,6 @@
 
 *js  
  - cp_main.js  名刺データベースビューアのインタフェース  
- - searchMember.js  議事録作成ページの「参加者」を表示するためのfunction  
 
 index.html  
 style.css  

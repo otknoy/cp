@@ -14,9 +14,9 @@ onload = function() {
     //検索
     $('form.quicksearch').submit(function(){return search($(".quicksearch__input").val())});
     function search(q) {
-        $('.result').html("<img src='../cp/img/loader.gif' style='margin: 50px'/>");
+        $('.result').html("<img src='img/loader.gif' style='margin: 50px'/>");
         query_temp = $('#query').val();
-        $.get('../cp/cgi/rdf_search.cgi',"query="+q,read);
+        $.get('cgi/rdf_search.cgi',"query="+q,read);
         return false;
     }
     function read(text){
@@ -39,7 +39,7 @@ onload = function() {
     //検索結果からプロフィールをみる
     $(document).on({
         'click': function(){
-            $('.result').html("<img src='../cp/img/loader.gif' style='margin: 50px'/>");
+            $('.result').html("<img src='img/loader.gif' style='margin: 50px'/>");
             var name = $(this).text();
             var s = $(this).parent().attr("id");
             name_temp = name;
@@ -56,7 +56,7 @@ onload = function() {
         }
     },'.name');
     function get_profile(n,s) {
-        $.get('../cp/cgi/getprofile.cgi',"name="+n+"&s="+encodeURIComponent(s),read_profile);
+        $.get('cgi/getprofile.cgi',"name="+n+"&s="+encodeURIComponent(s),read_profile);
         $('.back_button1').show();
         $('.edit_button').show();
         return false;
@@ -110,13 +110,13 @@ onload = function() {
     function edit_tag(){
         $.ajax({
             type: "POST",
-            url: "../cp/cgi/rdf_edit.cgi",
+            url: "cgi/rdf_edit.cgi",
             data: sendData,
             async: false,
             success: function(){
             }
         });
-        $.get('../cp/cgi/mecab.cgi',"memo="+$("*[name=edit_memo]").val()+"&job="+$("*[name=edit_job]").val(),mecab_read);
+        $.get('cgi/mecab.cgi',"memo="+$("*[name=edit_memo]").val()+"&job="+$("*[name=edit_job]").val(),mecab_read);
         return false;   
     }
     //タグをドラッグドロップ可能に
@@ -241,7 +241,7 @@ onload = function() {
     function post_tag() {
         $.ajax({
             type: "POST",
-            url: "../cp/cgi/tag_edit.cgi",
+            url: "cgi/tag_edit.cgi",
             data: sendTag,
             async: false,
             success: function(){
@@ -256,11 +256,11 @@ onload = function() {
             }
         });
         $('.result').empty();
-        $('.result').html("<img src='../cp/img/loader.gif' style='margin: 50px'/>");
+        $('.result').html("<img src='img/loader.gif' style='margin: 50px'/>");
         return false;
     }
     function back2() {
-        $.get('../cp/cgi/getprofile.cgi',"name="+name_temp+"&s="+encodeURIComponent(s_temp),reflesh2);
+        $.get('cgi/getprofile.cgi',"name="+name_temp+"&s="+encodeURIComponent(s_temp),reflesh2);
         return false;
     }
     function reflesh2(html){
@@ -283,7 +283,7 @@ onload = function() {
     function edit() {
         $.ajax({
             type: "POST",
-            url: "../cp/cgi/rdf_edit.cgi",
+            url: "cgi/rdf_edit.cgi",
             data: sendData,
             async: false,
             success: function(){
@@ -293,7 +293,7 @@ onload = function() {
             }
         });
         $('.result').empty();
-        $('.result').html("<img src='../cp/img/loader.gif' style='margin: 50px'/>");
+        $('.result').html("<img src='img/loader.gif' style='margin: 50px'/>");
         return false;
     }
     function back1() {
